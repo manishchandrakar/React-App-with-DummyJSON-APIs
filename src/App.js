@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import ProductList from './components/ProductList';
+import ProductDetail from './components/ProductDetail';
+
+// Footer component
+const Footer = () => {
+  return (
+    <footer style={{ textAlign: 'center', marginTop: '50px', paddingBottom: '20px' }}>
+      <p>Designed and Developed by <b>Manish Chandrakar</b></p>
+    </footer>
+  );
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar /><br/><br/><br/><br/><br/><br/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/products/category/:category_name" element={<ProductList />} />
+      </Routes>
+      <Footer /> {/* Include the Footer component at the bottom */}
+    </Router>
   );
 }
 

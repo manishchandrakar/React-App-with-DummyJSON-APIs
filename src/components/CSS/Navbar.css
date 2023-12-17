@@ -1,0 +1,74 @@
+/* Navbar.css */
+
+/* Navbar Container */
+.navbar {
+  background-color: #343a40; /* Dark background color */
+  padding: 1rem 0; /* Add some padding for better visual appeal */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  position: fixed;
+  width: 100%;
+  z-index: 21;
+  padding: 0;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  color: #ffffff; /* White text color */
+  font-weight: bold;
+  font-size: 1.5rem; /* Increase font size for better visibility */
+  text-decoration: none;
+}
+
+/* Navbar Links */
+.navbar-nav {
+  margin-left: auto; /* Push the links to the right */
+  display: flex;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* White text color */
+  font-size: 1rem;
+  transition: color 0.3s ease; /* Add a smooth transition for hover effect */
+  text-decoration: none;
+  display: flex;
+  align-items: center; /* Align items in the center vertically */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #17a2b8; /* Hover color */
+}
+
+/* Navbar Toggler Icon Color */
+.navbar-toggler-icon {
+  background-color: #ffffff; /* White color */
+}
+
+/* Responsive Navigation */
+@media (max-width: 767.98px) {
+  /* Add any specific styles for smaller screens here */
+  .navbar-nav {
+    text-align: center; /* Center-align links on small screens */
+    margin: 0; /* Reset margin for centered alignment */
+    display: flex;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0 10px; /* Add horizontal margin for better spacing */
+    margin-bottom: 10px; /* Add bottom margin for better spacing */
+  }
+
+  .navbar-toggler {
+    margin-right: 0; /* Remove right margin for better spacing */
+  }
+  
+  /* Add margin between Home and Products links */
+  .navbar-nav .nav-item:first-child {
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,77 @@
+/* ProductList.css */
+
+/* Container styling */
+.product-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: -1;
+}
+
+/* Header styling */
+.product-list-header {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  
+}
+
+/* Product item styling */
+.product-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  
+}
+
+/* Hover effect for product items */
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Text styling */
+.product-name {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .product-list-container {
+    padding: 10px;
+  }
+
+  .product-item {
+    padding: 15px;
+  }
+
+  .product-list-header {
+    font-size: 24px;
+  }
+
+  .product-name {
+    font-size: 20px;
+  }
+
+  .product-description {
+    font-size: 16px;
+  }
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff6347; /* Tomato color for error messages */
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
